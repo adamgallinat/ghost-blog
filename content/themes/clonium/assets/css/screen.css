@@ -502,6 +502,14 @@ box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
     letter-spacing: 0;
 }
 
+.page-links {
+    margin-top: 10px;
+    font-size: 1.7rem;
+    line-height: 1.5em;
+    font-weight: 300;
+    letter-spacing: 0;
+}
+
 .posts-header, .author h2, .published h2 {
     max-width: 700px;
     margin: 0 auto;
@@ -1051,6 +1059,11 @@ box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
     }
 
     .blog-description {
+        font-size: 1.7rem;
+        line-height: 1.5em;
+    }
+
+    .page-links {
         font-size: 1.7rem;
         line-height: 1.5em;
     }
