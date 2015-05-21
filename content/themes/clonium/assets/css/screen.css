@@ -525,7 +525,6 @@ box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
     position: relative;
-    width:80%;
     max-width: 700px;
     margin: 4rem auto;
     padding-bottom: 4rem;
@@ -679,6 +678,7 @@ box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
     max-width: 550px;
     max-height: 400px;
     box-shadow: 5px 8px 40px black;
+    -webkit-box-shadow: 5px 8px 40px black;
 }
 
 /* Keep images centred and within the bounds of the post-width */
@@ -1099,6 +1099,12 @@ box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
         margin-bottom: 40px;
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .post-image img {
+        max-width: 450px;
+    }
+}
 /* ==========================================================================
    11. Media Queries - Smaller than 500px
    ========================================================================== */
@@ -1171,7 +1177,7 @@ box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
     }
 
     .post-content .full-img {
-        width: auto;
+        width: 300px;
         width: calc(100% + 32px); /* expand with to image + margins */
         margin: 0 -16px; /* get rid of margins */
         min-width: 0;
@@ -1180,6 +1186,10 @@ box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
 
     .post-meta {
         font-size: 1.3rem;
+    }
+
+    .post-image img {
+        max-width: 300px;
     }
 
     .post-footer {
