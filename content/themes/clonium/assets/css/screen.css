@@ -23,7 +23,7 @@
    0. Normalize.css v2.1.3 | MIT License | git.io/normalize | (minified)
    ========================================================================== */
 
-article, aside, details,
+/*article, aside, details,
 figcaption, figure,
 footer, header, hgroup,
 main, nav, section,
@@ -35,21 +35,21 @@ html {
    font-family: sans-serif;
    -ms-text-size-adjust: 100%;
    -webkit-text-size-adjust: 100%;
-}
-body { margin: 0; }
-a { background: transparent; }
+}*/
+body { margin: 0; text-align: center;}
+/*a { background: transparent; }
 a:focus { outline: thin dotted; }
 a:active, a:hover { outline: 0; }
 h1 { font-size: 2em; margin: 0.67em 0; }
 abbr[title] { border-bottom: 1px dotted; }
 b, strong { font-weight: bold; }
-dfn { font-style: italic; }
+dfn { font-style: italic; }*/
 hr {
    -moz-box-sizing: content-box;
    box-sizing: content-box;
    height: 0;
 }
-mark { background: #ff0; color: #333332; }
+/*mark { background: #ff0; color: #333332; }
 code, kbd, pre,
 samp { font-family: monospace, serif; font-size: 1em; }
 pre { white-space: pre-wrap; }
@@ -96,7 +96,7 @@ button::-moz-focus-inner,
 input::-moz-focus-inner { border: 0; padding: 0; }
 textarea { overflow: auto; vertical-align: top; }
 table { border-collapse: collapse; border-spacing: 0; }
-
+*/
 
 /* ==========================================================================
    1. Icons - Sets up the icon font and respective classes
@@ -115,7 +115,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 }
 
 /* Apply these base styles to all icons */
-.icon-ghost:before,
+/*.icon-ghost:before,
 .icon-feed:before,
 .icon-twitter:before,
 .icon-google-plus:before,
@@ -130,11 +130,11 @@ table { border-collapse: collapse; border-spacing: 0; }
     text-decoration: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
+}*/
 
 /* Each icon is created by inserting the corret character into the
    content of the :before pseudo element. Like a boss. */
-.icon-ghost:before {
+/*.icon-ghost:before {
     content: "\e000";
 }
 .icon-feed:before {
@@ -149,7 +149,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 }
 .icon-facebook:before {
     content: "\e004";
-}
+}*/
 
 
 /* ==========================================================================
@@ -229,13 +229,14 @@ h6 {
 }
 
 a {
-    color: #57ad68;
+    color: #222A68;
     transition: color ease 0.3s;
     text-decoration: none;
+    cursor: pointer;
 }
 
 a:hover {
-    color: #3e7b4a;
+    color: #8FD694;
 }
 
 h1 a, h2 a, h3 a,
@@ -279,7 +280,7 @@ hr {
     padding: 0;
 }
 
-blockquote {
+/*blockquote {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 1.6em 0 1.6em -2.2em;
@@ -310,8 +311,8 @@ blockquote cite a { font-weight: normal; }
 mark {
     background-color: #ffc336;
 }
-
-code, tt {
+*/
+/*code, tt {
     padding: 1px 3px;
     font-family: Inconsolata, monospace, sans-serif;
     font-size: 0.85em;
@@ -360,7 +361,7 @@ kbd {
         0 1px 0 rgba(0, 0, 0, 0.2),
         0 1px 0 0 #fff inset;
 }
-
+*/
 table {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -379,7 +380,7 @@ table td {
     border-top: 1px solid #efefef;
 }
 
-table th { color: #333332; }
+/*table th { color: #333332; }
 
 table caption + thead tr:first-child th,
 table caption + thead tr:first-child td,
@@ -408,20 +409,20 @@ iframe, .fluid-width-video-wrapper {
     display: block;
     margin: 1.6em 0;
 }
-
+*/
 /* When a video is inside the fitvids wrapper, drop the
 margin on the iframe, cause it breaks stuff. */
-.fluid-width-video-wrapper iframe {
+/*.fluid-width-video-wrapper iframe {
     margin: 0;
-}
+}*/
 
 
 /* ==========================================================================
    3. Utilities - These things get used a lot
    ========================================================================== */
 
-/* Clears shit */
-.clearfix:before,
+
+/*.clearfix:before,
 .clearfix:after {
     content: " ";
     display: table;
@@ -429,13 +430,13 @@ margin on the iframe, cause it breaks stuff. */
 .clearfix:after { clear: both; }
 .clearfix { *zoom: 1; }
 
-/* Hides shit */
+
 .hidden {
     text-indent: -9999px;
     visibility: hidden;
     display: none;
 }
-
+*/
 /* Creates a responsive wrapper that makes our content scale nicely */
 .inner {
     position: relative;
@@ -456,14 +457,80 @@ margin on the iframe, cause it breaks stuff. */
    ========================================================================== */
 
 /* Big cover image on the home page */
+
+.fixed-header {
+    height: 50px;
+    width: 100vw;
+    background-color: cornflowerblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 99;
+    box-shadow: 0px 5px 15px black;
+    color: #CEEAF7;
+    text-align: left;
+}
+
+.fixed-header a {
+    color: #333332;
+}
+
+.fixed-header a:hover {
+    color: #8FD694;
+}
+
+.fixed-header img {
+    height: 40px;
+    width: 40px;
+    margin: 2px auto 0 auto;
+    line-height: 0;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    border: 2px solid #fff;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+}
+
+.fixed-header .header-links {
+    margin-top: 15px;
+    float: right;
+    height: 100%;
+    font-weight: 300;
+    font-size: 1.7rem;
+}
+
+.fixed-header .top-link {
+    font-weight: 700;
+    color: #CEEAF7;
+    font-size: 3.0rem;
+}
+
 .site-head {
     position: relative;
     display: table;
     width: 100%;
-    height: 340px;
+    height: 300px;
     text-align: center;
-    color: #333332;
-    
+    background-color: cornflowerblue;
+    color: #CEEAF7;
+    margin-bottom: 30px;
+    box-shadow: 0px 5px 15px black;
+}
+
+.picture-holder {
+    display: table;
+    width: 30%;
+    float: left;
+    height: 190px;
+}
+
+.content-holder {
+    display: table;
+    width: 70%;
+    height: 190px;
+    float: right;
 }
 
 .blog-logo {
@@ -481,8 +548,8 @@ margin on the iframe, cause it breaks stuff. */
     -moz-border-radius: 100px;
     border-radius: 100px;
     border: 5px solid #fff;
--webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
 }
 
 /* The details of your blog. Defined in ghost/settings/ */
@@ -494,14 +561,6 @@ box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
     font-weight: 700;
 }
 
-.blog-description {
-    margin: 0;
-    font-size: 1.7rem;
-    line-height: 1.5em;
-    font-weight: 300;
-    letter-spacing: 0;
-}
-
 .page-links {
     margin-top: 10px;
     font-size: 1.7rem;
@@ -510,16 +569,60 @@ box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
     letter-spacing: 0;
 }
 
+.site-about {
+    display: table;
+    width: 100%;
+    height: 430px;
+    text-align: center;
+    background-color: #CEEAF7;
+    color: #CEEAF7;
+    margin: 30px 0;
+}
+
+.about-content-holder {
+    display: inline-block;
+    width: 65%;
+    margin-right: 5%;
+    float: left;
+    color: #222A68;
+    text-align: left;
+}
+
+.about-content {
+    margin: 0;
+    font-size: 1.7rem;
+    line-height: 1.5em;
+    font-weight: 300;
+    letter-spacing: 0;
+}
+
+.about-content h2 {
+    margin-bottom: 10px;
+}
+
+.about-picture-holder {
+    display: inline-block;
+    width: 30%;
+    float: right;
+    padding: 30px 0;
+}
+
+.about-picture-holder img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+}
+
 .posts-header, .author h2, .published h2 {
     max-width: 700px;
     margin: 0 auto;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 18px;
     letter-spacing: 2px;
     border-top: 1px solid #d0d0d0;
     padding-left: 3px;
     padding-top: 8px;
-    color: #d0d0d0;
+    color: cornflowerblue;
 }
 
 .posts-header {
@@ -532,15 +635,52 @@ box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
 }
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
+    box-sizing: border-box;
     position: relative;
     max-width: 700px;
-    margin: 4rem auto;
-    padding-bottom: 4rem;
+    margin: 4rem auto 0 auto;
+    padding: 1rem;
     border-bottom: #eeeeee 1px solid;
     word-break: break-word;
     hyphens: auto;
-    text-align: center;
+    text-align: left;
+    overflow: hidden;
+    font-size: 1.7rem;
+    line-height: 1.5em;
+    font-weight: 300;
+    letter-spacing: 0;
 }
+
+.post-meta-holder {
+    width: 45%;
+    float: left;
+    align: left;
+    clear: both;
+    margin-right: 5%;
+}
+
+.post img {
+    width: 100%;
+    border: 2px solid black;
+}
+
+.post-title-holder {
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.post-content-holder {
+    width: 45%;
+    margin-left: 5%;
+    float: right;
+    font-size: 1.7rem;
+    line-height: 1.5em;
+    font-weight: 300;
+    letter-spacing: 0;
+}
+
 
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints. 
@@ -636,6 +776,15 @@ box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
     line-height: 1.5em;
 }
 
+.site-contact {
+    position: relative;
+    display: table;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 20px 0;
+    text-align: left;
+}
+
 /* ==========================================================================
    5. Single Post - When you click on an individual post
    ========================================================================== */
@@ -682,12 +831,12 @@ box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
     font-family: 'Lora', serif;
 }
 
-.post-image img {
+/*.post-image img {
     max-width: 550px;
     max-height: 400px;
     box-shadow: 5px 8px 40px black;
     -webkit-box-shadow: 5px 8px 40px black;
-}
+}*/
 
 /* Keep images centred and within the bounds of the post-width */
 .post-content img {
@@ -1073,6 +1222,10 @@ box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
         line-height: 1.6em;
     }
 
+    .post img {
+        max-width: 250px;
+    }
+
     .post-template .post {
         padding-bottom: 1rem;
     }
@@ -1114,9 +1267,9 @@ box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
 }
 
 @media only screen and (max-width: 600px) {
-    .post-image img {
+/*    .post-image img {
         max-width: 450px;
-    }
+    }*/
 }
 /* ==========================================================================
    11. Media Queries - Smaller than 500px
@@ -1199,10 +1352,6 @@ box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
 
     .post-meta {
         font-size: 1.3rem;
-    }
-
-    .post-image img {
-        max-width: 300px;
     }
 
     .post-footer {

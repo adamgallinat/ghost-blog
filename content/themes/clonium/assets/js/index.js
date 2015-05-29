@@ -30,6 +30,46 @@
 
 }(jQuery));
 
+$(document).on('scroll', headerPop);
+
+function headerPop(e) {
+  var top = $(document).scrollTop();
+  if (top > 250) {
+    $('.fixed-header').show();
+  } else {
+    $('.fixed-header').hide();
+  }
+};
+
+$(document).on('click', '.top-link', scrollToTop);
+$(document).on('click', '.about-link', scrollToAbout);
+$(document).on('click', '.projects-link', scrollToProjects);
+$(document).on('click', '.contact-link', scrollToContact);
+
+function scrollToTop() {
+  $('body').animate({
+    scrollTop: 0
+  }, 500);
+};
+
+function scrollToAbout() {
+  $('body').animate({
+    scrollTop: 251
+  }, 500);
+};
+
+function scrollToProjects() {
+  $('body').animate({
+    scrollTop: $('#projects').offset().top - 70
+  }, 500);
+};
+
+function scrollToContact() {
+  $('body').animate({
+    scrollTop: $('#contact').offset().top - 70
+  }, 500);
+};
+
 (function($,sr){
 
   // debouncing function from John Hann

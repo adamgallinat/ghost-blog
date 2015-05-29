@@ -4,38 +4,88 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 
 {{! The big featured header on the homepage, with the site logo and description }}
-<header class="site-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
-    <div class="vertical">
-        <div class="site-head-content inner">
-            {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
-            <h1 class="blog-title">{{@blog.title}}</h1>
-            <h2 class="blog-description">{{@blog.description}}</h2>
-            <h2 class="page-links">
-                <a href="{{@blog.url}}/resume">Resume</a> | <a href="https://github.com/adamgallinat">Github</a>
-            </h2>
+
+<header class='fixed-header'>
+    <div class='inner'>
+        <a class="top-link"><img src="{{@blog.logo}}"></a>
+        <div class='header-links'>
+            <a class="top-link">{{@blog.title}}</a> | 
+            <a class="about-link">About</a> | 
+            <a class="projects-link">Projects</a> | 
+            <a class="contact-link">Contact</a>
         </div>
     </div>
 </header>
 
+<section class="site-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+    <div class="vertical">
+        <div class="site-head-content inner">
+            <div class="picture-holder">
+                <div class="vertical">
+                    <a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>
+                </div>
+            </div>
+            <div class="content-holder">
+                <div class="vertical">
+                    <h1 class="blog-title">{{@blog.title}}</h1>
+                    <h2 class="page-links">
+                        <a class="about-link">About</a> | 
+                        <a class="projects-link">Projects</a> | 
+                        <a class="contact-link">Contact</a>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {{! The main content area on the homepage }}
-<main class="content" role="main">
-    <h1 class="posts-header">Projects &amp; Work Samples</h1>
-    {{! Each post will be output using this markup }}
+<a id="about"></a>
+<h1 class="posts-header">About Me</h1>
+<section class="site-about">
+    <div class="vertical">
+        <div class="site-about-content inner">
+            <div class="about-content-holder">
+                <div class="about-content">
+                    <h2>Greetings!</h2>
+                    <p>I’m a web developer in New York, and a graduate of General Assembly’s Web Development Immersive course.</p>
+                    <p>For six years, I was a community manager and project manager at Meetup.com, where I gained a deep appreciation for the power that software has to make the world a better place. I’m thrilled to have the ability to bend computers to my will, and create things that others will love.</p>
+                    <p>In my spare time, I write and host pub trivia games. I love tumbling down Wikipedia rabbit holes, and writing questions that inspire teams to work together.</p>
+                </div>
+            </div>
+            <div class="about-picture-holder">
+                <div class="vertical">
+                    <img src="/content/images/2015/05/Trivia.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<a id="projects"></a>
+<h1 class="posts-header">Projects &amp; Work Samples</h1>
+
+<section class="content" role="main">
     {{#foreach posts}}
 
     <article class="{{post_class}}">
-        <header class="post-header">
-            <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-            <!-- <span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM D, YYYY"}}</time></span> -->
-        </header>
-        <a href="{{url}}"><div class="post-image">
-            <img src={{image}}>
-        </div></a>
+        {{content}}
     </article>
 
     {{/foreach}}
+</section>
 
-    {{!! After all the posts, we have the previous/next pagination links }}
-    {{pagination}}
-
-</main>
+<a id="contact"></a>
+<h1 class="posts-header">Contact Me</h1>
+<section class="site-contact">
+    <div class="vertical">
+        <div class="site-contact-content inner">
+            <div class="contact-content-holder">
+                <div class="contact-link"><a href="http://github.com/adamgallinat/">Github</a></div>
+                <div class="contact-link"><a href="http://linkedin.com/in/adamgallinat/">LinkedIn</a></div>
+                <div class="contact-link"><a>917.435.1654</a></div>
+                <div class="contact-link"><a href="mailto:adam@gallin.at">adam@gallin.at</a></div>
+            </div>
+        </div>
+    </div>
+</section>
