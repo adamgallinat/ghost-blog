@@ -47,25 +47,25 @@ $(document).on('click', '.projects-link', scrollToProjects);
 $(document).on('click', '.contact-link', scrollToContact);
 
 function scrollToTop() {
-  $('body').animate({
+  $('body,html').animate({
     scrollTop: 0
   }, 500);
 };
 
 function scrollToAbout() {
-  $('body').animate({
+  $('body,html').animate({
     scrollTop: 251
   }, 500);
 };
 
 function scrollToProjects() {
-  $('body').animate({
+  $('body,html').animate({
     scrollTop: $('#projects').offset().top - 70
   }, 500);
 };
 
 function scrollToContact() {
-  $('body').animate({
+  $('body,html').animate({
     scrollTop: $('#contact').offset().top - 70
   }, 500);
 };
