@@ -944,17 +944,17 @@ table td {
     }
 }
 
-@media only screen and (max-width: 600px) {
-/*    .post-image img {
+/*@media only screen and (max-width: 600px) {
+    .post-image img {
         max-width: 450px;
-    }*/
-}
+    }
+}*/
 /* ==========================================================================
    11. Media Queries - Smaller than 500px
    ========================================================================== */
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 630px) {
 
     .blog-logo img {
         max-height: 80px;
@@ -993,8 +993,13 @@ table td {
         font-size: 1.5rem;
     }
 
+    .about-picture-holder img {
+        width: 100px;
+        height: 100px;
+    }
 
-    h1, h2 {
+
+    /*h1, h2 {
         font-size: 3rem;
         line-height: 1.1em;
         letter-spacing: -1px;
@@ -1006,6 +1011,10 @@ table td {
 
     h4 {
         font-size: 2.3rem;
+    }*/
+
+    .top-link {
+        display: none;
     }
 
     .post-template .post {
@@ -1030,6 +1039,10 @@ table td {
 
     .post-meta {
         font-size: 1.3rem;
+    }
+
+    .contact-details {
+        font-size: 15px;
     }
 
     .post-footer {
